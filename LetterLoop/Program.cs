@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace LetterLoop
 {
@@ -11,9 +12,14 @@ namespace LetterLoop
 
             for (int i = 0; i < input.Length; i++)
             {
-                var output = input[i].ToString();
-                //var newOutput = output.ToString();
-                Console.WriteLine(output);
+                char output = input[i];
+                int inputCounter = -1;
+                do
+                {
+                    Console.WriteLine(output);
+                    inputCounter++;
+                }
+                while (inputCounter < i);
             }
         }
     }
